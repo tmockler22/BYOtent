@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
     </div>);
   
     return (
-      <div>
+      <div className="session-modal">
       {signupName}
       {renderForm}</div>
     );

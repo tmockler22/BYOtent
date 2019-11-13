@@ -1,0 +1,31 @@
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 40px; 
+  left: 40px; 
+}
+
+.session-modal {
+  margin: 15px auto;
+  border: solid 1px gray; 
+  width: 300px; 
+  height: 350px;
+}
+
+.session-links {
+  position: absolute; 
+  top: 55px; 
+  right: 80px; 
+}
+
+.signup-link {
+  padding: 7px;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.login-link {
+  padding: 7px;
+  font-family: sans-serif;
+  font-weight: 100;
+}

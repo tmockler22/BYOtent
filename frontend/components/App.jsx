@@ -8,8 +8,8 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>BYOtent</h1>
-      <NavBarContainer />
+      <img src="assets/tent_logo.png" className="logo"/>
+      <NavBarContainer/>
     </header>
 
     <AuthRoute path="/login" component={LoginFormContainer} />

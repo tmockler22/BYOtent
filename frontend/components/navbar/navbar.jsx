@@ -5,13 +5,13 @@ const navBar = ({currentUser, logout}) => {
   
   const display = currentUser ? (
     <nav>
-      <p>greetings, {currentUser.username}</p>
+      <p>Welcome, {currentUser.username}</p>
       <button onClick={logout}>Log out</button>
     </nav>
   ):(
-    <nav>
-        <Link to='/signup'>Signup</Link>
-        <Link to='/login'>Login</Link>
+    <nav className="session-links">
+        <Link to='/signup' className="signup-link">Signup</Link>
+        <Link to='/login' className="login-link">Login</Link>
     </nav>
   )
   return (<div> { display } </div>)
