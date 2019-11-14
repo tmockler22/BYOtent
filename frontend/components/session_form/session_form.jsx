@@ -5,8 +5,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       username: "",
       password: ""
     };
@@ -25,59 +25,63 @@ class SessionForm extends React.Component {
 
   render () {
     let path = (this.props.formType === 'login') ? '/signup' : '/login';
-    let pathName = (this.props.formType === 'login') ? 'signup' : 'login';
-    
+    let pathName = (this.props.formType === 'login') ? 'Sign Up!' : 'Log In!';
+    let btnName = (pathName === 'Sign Up!' ? 'Log In' : 'Sign Up');
+    let formDescription = (pathName !== 'Sign Up!' ? 'Join BYOTENT!' : 'Welcome Back!');
+    let formInfo = (pathName !== 'Sign Up!' ? 'Already a member?' : 'New here?');
     let listErrors = this.props.errors.map(error => (
         <li>{error}</li>
       ));
+      // <div className="name-input">
 
-    let signupName = (this.props.formType !== 'signup') ? <div></div> : (<div>
-      <label>
-        First Name:
-          <input type="text"
-          value={this.state.firstName}
-          onChange={this.update("firstName")}
-        />
-      </label>
-      <label>
-        Last Name:
-          <input type="text"
-          value={this.state.lastName}
-          onChange={this.update("lastName")}
-        />
-      </label>
-    </div>);
+    let fnameInput = (this.props.formType !== 'signup') ? <p className="sign-in">It's camping o'clock.</p> : (<input type="text"
+          className="form-input-fname"
+          value={this.state.first_name}
+          placeholder="First Name..."
+          onChange={this.update("first_name")}
+        />);
+       
+    let lnameInput = (this.props.formType !== 'signup') ? null : (<input type="text"
+          className="form-input-lname"
+          value={this.state.last_name}
+          placeholder="Last Name..."
+          onChange={this.update("last_name")}
+        />);
 
     let renderForm = (<div>
-      <h3>{this.props.formType}</h3>
-      <ul>{listErrors}</ul>
-      <form>
-        <label>
-          Username:
+      <div className="errors-list"><ul className="session-form-errors">{listErrors}</ul></div>
+      <form className="session-form"> 
+          {fnameInput}
+          {lnameInput}
           <input type="text"
+            className="form-input"
             value={this.state.username}
+            placeholder="Username"
             onChange={this.update("username")}
           />
-        </label>
-        <label>
-          Password:
           <input type="password"
+            className="form-input"
             value={this.state.password}
+            placeholder="Password"
             onChange={this.update("password")}
           />
-        </label>
-        <button onClick={this.handleSubmit}>{this.props.formType}</button>
+        <button className="session-btn" onClick={this.handleSubmit}>{btnName}</button>
       </form>
-      <Link to={path}>{pathName}</Link>
+      <div className="form-suggest">
+      <p className="form-info">{formInfo}</p>
+      <Link className="form-link" to={path}>{pathName}</Link>
+      </div>
     </div>);
   
     return (
+      <div className="modal-screen">
       <div className="session-modal">
-      {signupName}
-      {renderForm}</div>
+      <h3 className="form-description">{formDescription}</h3>
+      {renderForm}
+      </div>
+      </div>
     );
   };
- 
 };
 
 export default SessionForm;

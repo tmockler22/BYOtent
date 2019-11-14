@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render '/api/users/show' 
     else 
-      render json: ["Invalid username or password!"], status: 401 
+      render json: ["Invalid username/password combo."], status: 401 
     end
   end
 
@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
       logout! 
       render json: {}, status: 200
     else
-      render json: ["unsuccessful logout"], status:404
+      render json: ["Unsuccessful Logout"], status:404
     end
   end
 end

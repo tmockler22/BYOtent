@@ -1,21 +1,160 @@
 .logo {
+  z-index: -1;
   width: 200px;
   position: absolute;
   top: 40px; 
   left: 40px; 
 }
 
+.modal-screen {
+  z-index: 50;
+  position: 'fixed';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 50;
+}
+
 .session-modal {
-  margin: 15px auto;
-  border: solid 1px gray; 
-  width: 300px; 
-  height: 350px;
+  position: relative; 
+  display: block; 
+  z-index: 100; 
+  margin: 30px auto;
+  background: white;
+  border: solid .5px lightgray; 
+  width: 325px; 
+  opacity: 1;
+  height: 420px;
+  box-shadow: -1px 1px 5px 5px rgba(0,0,0,0.1);
+}
+
+.errors-list {
+  width: 320px; 
+}
+
+.session-form-errors {
+  font-size: 12px; 
+  color: gray;
+  text-align: center;    
+}
+
+.session-btn {
+  transition: background-color 0.5s ease;
+  position: absolute; 
+  left: 25px;  
+  bottom: 55px;
+  background: #40D9AC;
+  width: 275px;
+  height: 60px;  
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  border-radius: 3px; 
+  color: white;
+  font-family: sans-serif; 
+  font-weight: bold;    
+}
+
+.form-suggest {
+  display: flex;
+  justify-content: center; 
+  position: absolute; 
+  left: 50px; 
+  bottom: 18px;
+  width: 225px; 
+  text-align: center; 
+  margin: auto; 
+}
+
+.form-link {
+  margin-left: 8px; 
+  font-weight: bold; 
+  font-family: sans-serif;
+  font-size: 12px; 
+}
+
+.form-description {
+  padding: 18px; 
+  font-size: 26px;
+  text-align: center;   
+  font-family: sans-serif; 
+}
+
+.form-info {
+  color: gray; 
+  font-family: sans-serif; 
+  font-size: 12px; 
+}
+
+.form-input {
+  border: solid .5px black; 
+}
+
+.session-btn:hover {
+  background-color: #39c39a; 
+  color: white;
 }
 
 .session-links {
+  z-index: -1; 
   position: absolute; 
   top: 55px; 
   right: 80px; 
+}
+
+.session-form {
+  height: 50px;
+  font-family: sans-serif;
+  border-radius: 2px; 
+  color: black;  
+}
+
+.form-input-fname, .form-input-lname {
+  margin-top: 30px; 
+  border: solid 1px black; 
+  width: 140px;   
+}
+
+input[type=text], input[type=password] {
+  padding: 14px 20px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+.session-form > input {
+  margin-top: 10px; 
+}
+
+div > .form-input-fname {
+  margin-right: 15px;   
+}
+
+.form-input {
+  width: 295px; 
+}
+
+.session-form > input {
+  margin: 4px 15px; 
+}
+
+.sign-in-name {
+  margin: -10px 0px 15px 15px; 
+  width: 295px; 
+}
+
+.name-input {
+  margin-top: 20px; 
+  margin-bottom: -10px; 
+}
+
+.sign-in {
+  color: gray;
+  font-family: sans-serif;  
+  font-size: 12px; 
+  text-align: center; 
 }
 
 .signup-link {
