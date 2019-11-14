@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const App = () => (
   <div>
     <header>
-      <Link to="/"><img src="assets/tent_logo.png" className="logo"/></Link>
+      <Link to="/"><img src="assets/images/tent_logo.png" className="logo"/></Link>
       <NavBarContainer/>
     </header>
 
