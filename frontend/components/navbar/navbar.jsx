@@ -10,8 +10,8 @@ const navBar = ({currentUser, logout}) => {
     </nav>
   ):(
     <nav className="session-links">
-        <Link to='/signup' className="signup-link">Signup</Link>
-        <Link to='/login' className="login-link">Login</Link>
+        <Link to='/signup' className="signup-link">Sign up</Link>
+        <Link to='/login' className="login-link">Log in</Link>
     </nav>
   )
   return (<div> { display } </div>)
