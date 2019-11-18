@@ -1,0 +1,25 @@
+.campsites-index {
+  margin-top: 150px;
+}
+
+.campsite-list {
+  display: flex; 
+  justify-content: space-evenly; 
+  margin-left: 30px;
+  margin-right: 30px; 
+  flex-wrap: wrap; 
+}
+
+.campsite {
+  width: 300px; 
+  margin-top: 50px;
+  margin-left: 20px; 
+  margin-right: 20px; 
+  height: auto;
+  box-shadow: 1px 2px 4px lightgray;
+}
+
+.photo {
+  width: 300px; 
+  height: auto;
+}

@@ -1,7 +1,7 @@
 class Campsite < ApplicationRecord
-  validate :title,
+  validates :title,
            :description,
-           :type,
+           :site_type,
            :owner_id,
            :max_guests,
            :daily_rate,
@@ -15,7 +15,9 @@ class Campsite < ApplicationRecord
 
   belongs_to :owner,
     foreign_key: :owner_id,
-    class_name: :User           
+    class_name: :User   
+    
+  has_one_attached :photo
 end
 
 

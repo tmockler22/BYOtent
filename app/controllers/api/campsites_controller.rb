@@ -24,7 +24,7 @@ class Api::CampsitesController < ApplicationController
     params.require(:campsite).permit(
            :title,
            :description,
-           :type,
+           :site_type,
            :owner_id,
            :max_guests,
            :daily_rate,
@@ -33,7 +33,8 @@ class Api::CampsitesController < ApplicationController
            :zipcode,
            :country, 
            :lat, 
-           :lng, 
+           :lng,
+           :photo
         )
   end
 end

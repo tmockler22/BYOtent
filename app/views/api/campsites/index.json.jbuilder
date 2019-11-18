@@ -1,11 +1,10 @@
 @campsites.each do |campsite| 
-  json.set! campsite.id do  
-    json.extract! campsite, 
+  json.set! campsite.id do   
     json.extract! campsite, 
         :id, 
         :title,
         :description,
-        :type,
+        :site_type,
         :owner_id,
         :max_guests,
         :daily_rate,
@@ -26,5 +25,8 @@
         :RV_sanitation,  
         :picnic_table,  
         :trash 
+    if campsite.photo.attached?
+      json.photo url_for(campsite.photo)
+    end
     end
   end
