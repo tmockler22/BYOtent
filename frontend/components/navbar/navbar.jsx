@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 const navBar = ({currentUser, logout}) => {
   
   const display = currentUser ? (
-    <nav>
-      <p>Welcome, {currentUser.username}</p>
-      <button onClick={logout}>Log out</button>
+    <nav className="logout-nav">
+      <button onClick={logout} className="logout-btn">Log out</button>
     </nav>
   ):(
     <nav className="session-links">

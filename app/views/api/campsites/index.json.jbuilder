@@ -24,7 +24,7 @@
         :RV_hookup,  
         :RV_sanitation,  
         :picnic_table,  
-        :trash 
+        :trash
     if campsite.photo.attached?
       json.photo url_for(campsite.photo)
     end

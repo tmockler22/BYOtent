@@ -22,4 +22,5 @@ json.extract! campsite,
   :RV_hookup,  
   :RV_sanitation,  
   :picnic_table,  
-  :trash 
+  :trash
+  

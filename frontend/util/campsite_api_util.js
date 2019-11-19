@@ -5,3 +5,11 @@ export const fetchCampsites = () => {
     error: (err) => console.log(err)
   })
 }
+
+export const fetchCampsite = (campsiteId) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/campsites/${campsiteId}`
+  })
+);
+

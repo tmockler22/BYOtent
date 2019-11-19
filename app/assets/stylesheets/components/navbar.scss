@@ -124,9 +124,28 @@
 .session-links {
   z-index: -1; 
   position: absolute; 
-  top: 52px; 
+  top: 48px; 
   right: 80px; 
   font-size: 14px; 
+}
+
+.logout-nav {
+  display: flex; 
+  z-index: -1; 
+  position: absolute; 
+  top: 48px; 
+  right: 80px; 
+  font-size: 14px; 
+}
+
+.logout-btn {
+  margin-left: 10px; 
+  display: inline-block;
+  margin: 7px;
+  padding-bottom: 3px; 
+  font-family: sans-serif;
+  font-weight: 100;
+  border-bottom: solid 1px lightgray;  
 }
 
 .session-form {
@@ -194,6 +213,11 @@ div > .form-input-fname {
 }
 
 .signup-link:hover {
+  transition: border-bottom .75s ease;
+  border-bottom: solid 1px black;
+}
+
+.logout-btn:hover {
   transition: border-bottom .75s ease;
   border-bottom: solid 1px black;
 }
