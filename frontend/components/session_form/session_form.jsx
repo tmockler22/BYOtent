@@ -25,15 +25,49 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  demoEffect(demoUser) {
+    const that = this;
+    let index = 0;
+    const demoIntervalId = setInterval(() => {
+      if (index < demoUser.username.length) {
+        that.setState({
+          username: this.state.username + demoUser.username[index]
+        })
+      }
+      if (index < demoUser.password.length) {
+        that.setState({
+          password: this.state.password + demoUser.password[index]
+        })
+      }
+      index++;
+      if (index > demoUser.password.length && index > demoUser.username.length) {
+        clearInterval(demoIntervalId);
+        this.props.processForm(demoUser);
+      }
+    }, 200)
+  }
+
   handleDemo(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state = {
+    const demoUser = {
       first_name: "",
       last_name: "",
       username: "Guest",
-      password: "password"}); 
-    this.props.processForm(user);
+      password: "password"
+    }; 
+    this.demoEffect(demoUser)
+
   }
+
+  // handleDemo(e) {
+  //   e.preventDefault();
+  //   const user = Object.assign({}, this.state = {
+  //     first_name: "",
+  //     last_name: "",
+  //     username: "Guest",
+  //     password: "password"}); 
+  //   this.props.processForm(user);
+  // }
   
 
   update(field) {
