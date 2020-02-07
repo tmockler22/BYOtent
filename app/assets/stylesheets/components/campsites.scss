@@ -1,36 +1,51 @@
 .campsites-index {
-  margin-top: 150px;
+  margin: 60px 25px 40px 25px;
+  display: flex; 
+  justify-content: space-around; 
+  min-width: 1100px;
+}
+
+.index-map {
+  border-radius: 3px;
+}
+
+.map {
+  margin-top: -40px; 
 }
 
 .campsite-list {
   display: flex; 
-  justify-content: space-evenly; 
-  margin-left: 30px;
-  margin-right: 30px; 
+  margin-top: -40px;  
   flex-wrap: wrap; 
+  // width: 680px; 
 }
 
 .campsite {
   display: flex; 
   flex-direction: column; 
-  width: 300px; 
-  margin-top: 50px;
-  margin-left: 20px; 
-  margin-right: 20px; 
+  width: 220px; 
+  margin-top: 40px;
+  margin-left: 12px; 
+  margin-right: 12px; 
   height: auto;
   box-shadow: 1px 1px 4px lightgray;
+  border: 1px solid lightgray; 
+  border-radius: 4px; 
 }
 
 .photo {
-  width: 300px; 
+  width: 220px; 
   height: auto;
+  border-top-left-radius: 4px; 
+  border-top-right-radius: 4px; 
 }
 
 .campsite-title {
   margin-top: 15px; 
   margin-left: 10px; 
-  font-size: 22px; 
-  font-family: sans-serif;
+  font-size: 16px;  
+  font-weight: 300;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
 .campsite-rate {
@@ -38,22 +53,28 @@
   margin-right: 10px; 
   margin-bottom: 10px;  
   font-size: 18px; 
-  font-family: sans-serif; 
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
   align-self: flex-end;
 }
 
 .campsite-page {
-  margin-top: 120px; 
+  width: 700px; 
+  margin: 120px auto;  
 }
 
 .campsite-page-photo {
-  width: 75%; 
+  width: 650px; 
   height: auto; 
   margin: 0 auto; 
 }
 
-.campsite-title {
-  font-family: sans-serif; 
+.campsite-details {
+  display: flex;
+  justify-content: space-around;  
+}
+
+.campsite-show-title {
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
   font-size: 24px; 
   font-weight: 500; 
   margin-top: 20px; 
@@ -62,7 +83,7 @@
 
 .campsite-description {
   width: 250px; 
-  font-family: sans-serif; 
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
   font-size: 12px; 
   font-weight: 500; 
   margin-top: 20px; 

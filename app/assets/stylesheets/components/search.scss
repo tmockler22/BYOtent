@@ -1,0 +1,129 @@
+input.location-search-input {
+  width: 500px; 
+  height: 45px;
+  padding: 14px 55px; 
+}
+
+input.nav-location-search-input {
+  width: 500px; 
+  height: 45px;
+  padding: 14px 55px; 
+}
+
+.city-index {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 20px; 
+  margin-top: 75px; 
+  margin-left: 110px; 
+}
+
+.city-name {
+  color: #ff914d;
+}
+
+div.autocomplete-dropdown-container {
+  position: absolute; 
+  background: white; 
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+  padding: 0px 50px; 
+  bottom: -5; 
+  width: 498px; 
+}
+
+div.nav-autocomplete-dropdown-container {
+  position: absolute; 
+  background: white; 
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+  padding: 0px 50px; 
+  bottom: -5; 
+  width: 498px; 
+}
+
+.search-icon {
+  font-size: 22px; 
+  position: absolute; 
+  top: 12px; 
+  left: 19px; 
+}
+
+.search-bar {
+  border-top: 1px solid lightgray; 
+  border-left: 1px solid lightgray; 
+  border-radius: 5px; 
+  box-shadow: 1px 1px 3px lightgray;
+  width: 500px; 
+  margin: 50px auto; 
+  position: relative; 
+}
+
+.nav-search-bar {
+  border-top: 1px solid lightgray; 
+  border-left: 1px solid lightgray; 
+  border-radius: 5px; 
+  box-shadow: 1px 1px 3px lightgray;
+  width: 500px; 
+  position: relative;  
+  margin-top: 10px; 
+}
+
+.nav-search-icon {
+  font-size: 22px; 
+  position: absolute; 
+  top: 12px; 
+  left: 19px; 
+}
+
+.main-page-title {
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
+  font-size: 32px; 
+}
+
+.main-page-description {
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
+  font-size: 18px; 
+  margin-top: 16px; 
+  color: gray; 
+}
+
+.main-page-info {
+  margin: 60px 180px; 
+  width: 450px; 
+}
+
+.explore-main {
+  display: flex; 
+  justify-content: space-around; 
+  width: 1100px;
+  margin: 0 auto; 
+  margin-bottom: 140px; 
+}
+
+.explore-title {
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
+  font-size: 18px;
+  font-weight: 100; 
+  color: black; 
+  margin: 60px 0px 25px 100px;  
+}
+
+.explore-pic-title {
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
+  font-size: 22px;
+  text-align: center;
+  margin-top: -50px;
+  color: white;
+}
+
+.explore-img {
+  width: 320px; 
+  height: 480px;
+  border-radius: 8px;  
+}
+
+.explore-link:hover {
+  cursor: pointer;
+}

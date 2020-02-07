@@ -11,7 +11,7 @@ class CampsiteIndexItem extends React.Component {
     return (
       <Link to={`/campsites/${campsite.id}`}>
       <div className="campsite">
-        <li className="photo"><img src={campsite.photo}/></li>
+        <li><img className="photo" src={campsite.photo}/></li>
         <li className="campsite-title">{campsite.title}</li>
         <li className="campsite-rate">${campsite.daily_rate}/night</li>
       </div>

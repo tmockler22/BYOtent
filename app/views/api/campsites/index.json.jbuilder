@@ -1,6 +1,6 @@
 @campsites.each do |campsite| 
   json.set! campsite.id do   
-    json.extract! campsite, 
+    json.extract! campsite,
         :id, 
         :title,
         :description,
@@ -10,6 +10,7 @@
         :daily_rate,
         :address,
         :state,
+        :city,
         :zipcode,
         :country, 
         :lat, 

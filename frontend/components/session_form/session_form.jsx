@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -14,9 +14,10 @@ class SessionForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this);
   }
 
-  componentDidMount(){
-    this.props.clearErrors();
+  componentWillUnmount() {
+    this.props.clearErrors(); 
   }
+  
 
   handleSubmit(e) {
     e.preventDefault();
@@ -30,24 +31,21 @@ class SessionForm extends React.Component {
       first_name: "",
       last_name: "",
       username: "Guest",
-      password: "password"});
+      password: "password"}); 
     this.props.processForm(user);
   }
+  
 
   update(field) {
     return (e) => this.setState({[field]: e.currentTarget.value});
   };
 
   render () {
-    let path = (this.props.formType === 'login') ? '/signup' : '/login';
     let pathName = (this.props.formType === 'login') ? 'Sign Up!' : 'Log In!';
     let btnName = (pathName === 'Sign Up!' ? 'Log In' : 'Sign Up');
     let formDescription = (pathName !== 'Sign Up!' ? 'Join BYOTENT!' : 'Welcome Back!');
-    let formInfo = (pathName !== 'Sign Up!' ? 'Already a member? Or try a demo.' : 'New here?');
-    let listErrors = this.props.errors.map((error, i) => (
-        <li key={i}>{error}</li>
-      ));
-      // <div className="name-input">
+    let formInfo = (pathName !== 'Sign Up!' ? 'Already a member?' : 'New here?');
+    let listErrors = this.props.errors[0];
 
     let fnameInput = (this.props.formType !== 'signup') ? <p className="sign-in">It's camping o'clock.</p> : (<input type="text"
           className="form-input-fname"
@@ -67,8 +65,9 @@ class SessionForm extends React.Component {
           onClick={this.handleDemo}>Demo</button>);    
 
     let renderForm = (<div>
-      <div className="errors-list"><ul className="session-form-errors">{listErrors}</ul></div>
+      {/* <div className="errors-list"><ul className="session-form-errors">{listErrors}</ul></div> */}
       <form className="session-form"> 
+         <div onClick={this.props.closeModal} className="close-x"></div>
           <div className="name-input">
             {fnameInput}
             {lnameInput}
@@ -90,14 +89,17 @@ class SessionForm extends React.Component {
       </form>
       <div className="form-suggest">
       <p className="form-info">{formInfo}</p>
-      <Link className="form-link" to={path}>{pathName}</Link>
+      {this.props.otherForm}
       </div>
     </div>);
   
     return (
       <div className="modal-screen">
+      <div className="errors-list">
+        <ul className="session-form-errors">{listErrors}</ul>
+      </div>
       <div className="session-modal">
-      <h3 className="form-description">{formDescription}</h3>
+        <h3 className="form-description">{formDescription}</h3>
       {renderForm}
       </div>
       </div>
@@ -105,4 +107,4 @@ class SessionForm extends React.Component {
   };
 };
 
-export default SessionForm;
+export default withRouter(SessionForm);

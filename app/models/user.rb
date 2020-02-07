@@ -1,12 +1,14 @@
 class User < ApplicationRecord
-  validates :username, :session_token, :first_name, :last_name, :password_digest, presence: true
+  validates :first_name, :last_name, :username, :session_token, :password_digest, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
   after_initialize :ensure_session_token
   attr_reader :password 
 
-  has_many :listings
+  has_many :campsites,
+    foreign_key: :owner_id,
+    class_name: :Campsite 
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

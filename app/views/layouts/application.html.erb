@@ -4,9 +4,15 @@
     <title>BYOtent</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <script type="text/javascript"> window.tentLogoURL = "<%= image_url('tent_logo.png') %>";</script>
+    <script type="text/javascript"> window.traverseCity = "<%= image_url('traverse_city.jpg') %>";</script>
+     <script type="text/javascript"> window.joshuaTree = "<%= image_url('joshua_tree.jpg') %>";</script>
+      <script type="text/javascript"> window.lakeTahoe = "<%= image_url('lake_tahoe.jpg') %>";</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTX6BIhzhCr42ljYJLS8vyidqP2kJAXE&libraries=places"></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
   </head>
 
   <body>

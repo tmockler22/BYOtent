@@ -2,7 +2,7 @@ import CampsiteIndex from "./campsites_index.jsx";
 import { connect } from 'react-redux';
 import { fetchCampsites } from '../../actions/campsite_actions';
 
-const msp = (state) => {
+const msp = (state) => { 
   return { campsites: state.entities.campsites };
 };
 
