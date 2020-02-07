@@ -1,0 +1,73 @@
+.update-num-guests {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;  
+  font-size: 14px;
+  padding:  1px 6px; 
+}
+
+.update-guests-info {
+  color: gray; 
+  margin-bottom: 6px; 
+}
+
+.update-guests {
+  padding: 0px 9px; 
+  font-size: 14px; 
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;  
+  height: 56px; 
+  margin-top: -92px; 
+}
+
+.update-guest-count {
+  font-size: 14px; 
+  text-align: center;  
+}
+
+.update-session-modal {
+  position: relative; 
+  display: block; 
+  z-index: 100; 
+  margin: 30px auto;
+  background: whitesmoke;
+  border: solid 1px lightgray; 
+  width: 320px; 
+  height: 200px;
+  box-shadow: -2px 2px 4px 4px rgba(0,0,0,0.1);
+  border-radius: 3px; 
+  // animation: slide .5s;
+}
+
+.update-form-description {
+  margin: 8px 0px;  
+  font-size: 22px;
+  text-align: center;   
+  font-family: "Calibre", Helvetica, Arial, sans-serif; 
+}
+
+.update-date-range-picker {
+  text-align: center; 
+}
+
+.update-book-btn {
+  width: 300px; 
+  text-align: center; 
+  padding: 7px 10px; 
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: white; 
+  border: solid 3px #40D9AC;
+  background-color: #40D9AC;   
+  margin-top: 55px;
+  margin-left: 10px;  
+}
+
+.update-book-btn:hover {
+  transition: background-color .75s ease;
+  background-color: white; 
+  color: #40D9AC; 
+}

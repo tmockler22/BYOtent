@@ -17,8 +17,14 @@ class TripIndexItem extends React.Component {
         <li><img className="trip-photo" src={campsite.photo} /></li>
         <li className="trip-campsite-title">{campsite.title}</li>
       </Link >
-      <li className="trip-dates">{booking.arrival_date} - {booking.depart_date}
+      <li className="trip-dates">
+        <div>
+        <p>{booking.num_campers} campers</p>
+        <p>Arriving: {booking.arrival_date}</p>
+        <p>Departing: {booking.depart_date}</p>
+        </div>
         <button className="cancel-trip" onClick={() => this.props.cancelBooking(bookingId)}>Cancel</button>
+        <button className="update-trip" onClick={() => this.props.openBookingModal('updateBooking', booking)}>Update</button>
       </li>
     </div>) : (<div></div>);
 

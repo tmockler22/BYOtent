@@ -15,6 +15,21 @@ export const createBooking = (booking, campsiteId) => {
   );
 };
 
+export const editBooking = (booking) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/bookings/${booking.id}`,
+    data: {
+      booking:
+      {
+        arrival_date: booking.arrival_date,
+        depart_date: booking.depart_date,
+        num_campers: booking.num_campers
+      }
+    }
+  })
+);
+
 export const deleteBooking = (bookingId) => {
   return (
     $.ajax({

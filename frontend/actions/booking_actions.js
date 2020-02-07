@@ -55,6 +55,13 @@ export const createBooking = (booking, campsiteId) => (dispatch) => {
   );
 };
 
+export const updateBooking = (booking) => (dispatch) => (
+  APIBooking.editBooking(booking).then(
+    booking => dispatch({ type: RECEIVE_BOOKING, booking, bookingType: "update" }),
+    err => dispatch(receiveErrors(err.responseJSON))
+  )
+);
+
 export const deleteBooking = (bookingId) => (dispatch) => {
   return (
     APIBooking.deleteBooking(bookingId).then(

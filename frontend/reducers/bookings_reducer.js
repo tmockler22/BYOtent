@@ -1,7 +1,8 @@
-import { RECEIVE_BOOKINGS, REMOVE_BOOKING, RECEIVE_BOOKING, RECEIVE_BOOKINGS_FOR_CAMPSITE, RECEIVE_BOOKINGS_FOR_USER } from "../actions/booking_actions";
+import { OPEN_BOOKING_MODAL, RECEIVE_BOOKINGS, REMOVE_BOOKING, RECEIVE_BOOKING, RECEIVE_BOOKINGS_FOR_CAMPSITE, RECEIVE_BOOKINGS_FOR_USER } from "../actions/booking_actions";
 
 const bookingsReducer = (state = {}, action) => {
   Object.freeze(state);
+  
   switch (action.type) {
     case RECEIVE_BOOKINGS:
       return action.bookings;
