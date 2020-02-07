@@ -86,11 +86,11 @@ class Search extends React.Component {
         </div>
           <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 44.765168, lng: -85.622944 }, address: "Traverse City" } })}>
           <img className="explore-img" src={window.traverseCity} /> 
-            <p className="explore-pic-title">Peaceful Traverse City</p>
+            <p className="explore-pic-title">Peaceful Traverse City.</p>
         </div>
           <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 44.765168, lng: -85.622944 }, address: "Traverse City" } })}>
           <img className="explore-img" src={window.joshuaTree} /> 
-          <p className="explore-pic-title">Explore Joshua Tree</p>
+          <p className="explore-pic-title">Explore Joshua Tree.</p>
         </div>
       </div>
       </div>
