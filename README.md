@@ -1,24 +1,15 @@
-# README
+# BYOtent
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BYOtent is a booking app made to mimic HipCamp. BYOtent uses Ruby on Rails and PostgresQL on the backend, and JavaScript and React on the frontend.
 
-Things you may want to cover:
+### [Live Site](https://byotent.herokuapp.com/)
 
-* Ruby version
+## Features
 
-* System dependencies
+### Authentication
 
-* Configuration
+<img src="#">
+BYOtent's booking feature doesn't allow you to book if those dates have been taken.  
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Technologies Used
+BYOtent is built using Ruby, Rails, React, Javascript, AWS, Google Maps API, PostgresQL. 
