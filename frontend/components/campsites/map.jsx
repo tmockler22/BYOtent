@@ -24,19 +24,19 @@ class MyMap extends React.Component {
       const center = { lat: this.props.latLng.latLng.lat, lng: this.props.latLng.latLng.lng };
       const containerStyle = {
         position: 'relative',
-        width: '380px',
-        height: '440px',
-        margin: '-80px 0px 0px 0px'
+        width: '500px',
+        height: '550px',
+        margin: '20px 0px 0px 20px'
       };
       const mapStyles = {
-        width: '380px',
-        height: '440px',
+        width: '500px',
+        height: '550px',
       };  
 
     return (
         <Map
           google={this.props.google}
-          zoom={14}
+          zoom={13}
           style={mapStyles}
           containerStyle={containerStyle}
         initialCenter={center}

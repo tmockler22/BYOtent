@@ -23,10 +23,9 @@ class Search extends React.Component {
   };
 
   handleSelect(address) {
-  
     geocodeByAddress(address)
       .then(results => getLatLng(results[0]))
-      .then(latLng => this.props.history.push({pathname: '/discover', state: {latLng: latLng, address: address}}))
+      .then(latLng => this.props.history.push({ pathname: `/discover`, state: {latLng: latLng, address: address}}))
       .catch(error => console.error('Error', error));
   };
 
@@ -80,18 +79,18 @@ class Search extends React.Component {
       </PlacesAutocomplete>
       <h1 className="explore-title">Explore somewhere new.</h1>
       <div className="explore-main">
-          <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 44.765168, lng: -85.622944}, address: "Traverse City" } })}>
-          <img className="explore-img" src={window.lakeTahoe} /> 
-          <p className="explore-pic-title">Beautiful Lake Tahoe.</p>
-        </div>
+          <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 39.183272, lng: -119.926811}, address: "Lake Tahoe" } })}>
+            <img className="explore-img" src={window.lakeTahoe} /> 
+            <p className="explore-pic-title">Beautiful Lake Tahoe.</p>
+          </div>
           <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 44.765168, lng: -85.622944 }, address: "Traverse City" } })}>
-          <img className="explore-img" src={window.traverseCity} /> 
+            <img className="explore-img" src={window.traverseCity} /> 
             <p className="explore-pic-title">Peaceful Traverse City.</p>
-        </div>
-          <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 44.765168, lng: -85.622944 }, address: "Traverse City" } })}>
-          <img className="explore-img" src={window.joshuaTree} /> 
-          <p className="explore-pic-title">Explore Joshua Tree.</p>
-        </div>
+          </div>
+          <div className="explore-link" onClick={() => this.props.history.push({ pathname: '/discover', state: { latLng: { lat: 33.8734, lng: -115.9010 }, address: "Joshua Tree" } })}>
+            <img className="explore-img" src={window.joshuaTree} /> 
+            <p className="explore-pic-title">Explore Joshua Tree.</p>
+          </div>
       </div>
       </div>
     );
